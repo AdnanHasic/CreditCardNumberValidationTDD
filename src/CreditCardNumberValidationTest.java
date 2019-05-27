@@ -51,4 +51,12 @@ class CreditCardNumberValidationTest {
         Assertions.assertTrue(expected);
     }
 
+    @Test
+    public void getSizeTest_ShouldReturnNumberOfDigitsInCreditCardNumber_IfGivenCreditCardNumber(){
+
+        int result = card1.getSize(creditCardNumber);
+
+        int expected = 15;
+    }
+
 }
