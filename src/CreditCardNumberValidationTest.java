@@ -23,16 +23,24 @@ class CreditCardNumberValidationTest {
     }
 
     @Test
-    public void sumOfDoubleEvenPlaceTest_ShouldReturnSumOfDoubleEvenPlace_IfGivenCreditCardNumber(){
+    public void sumOfDoubleEvenPlaceTest_ShouldReturnSumOfDoubleEvenPlace_IfGivenCreditCardNumber() {
 
         int result = card1.sumOfDoubleEvenPlace(creditCardNumber);
 
         int expected = 31;
 
-        Assertions.assertEquals(expected,result);
+        Assertions.assertEquals(expected, result);
 
     }
 
-    
+    @Test
+    public void sumOfOddPlaceTest_ShouldReturnSumOfOddPlace_IfGivenCreditCardNumber() {
+
+        int result = card1.sumOfOddPlace(creditCardNumber);
+
+        int expected = 31;
+
+        Assertions.assertEquals(expected, result);
+    }
 
 }
