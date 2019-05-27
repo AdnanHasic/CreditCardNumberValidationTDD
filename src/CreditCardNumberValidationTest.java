@@ -59,4 +59,15 @@ class CreditCardNumberValidationTest {
         int expected = 15;
     }
 
+    @Test
+    public void getSumOfEvenAndOddPlaceTest_ShoulReturnSumOfTheSumOfOddPlaceAndSumOfEvenPlace(){
+
+        int result = card1.getSumOfEvenAndOddPlace(card1.sumOfOddPlace(creditCardNumber)
+                + card1.sumOfDoubleEvenPlace(creditCardNumber));
+
+        int expected = 62;
+
+        Assertions.assertEquals(expected,result);
+    }
+
 }
