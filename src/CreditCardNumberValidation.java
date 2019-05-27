@@ -61,4 +61,18 @@ public class CreditCardNumberValidation {
 
         return creditCardnNumberToString.length();
     }
+
+    public int getSumOfEvenAndOddPlace(int number1, int number2) {
+
+        return number1 + number2;
+    }
+
+    public boolean sumIsDivisibleBy10(int sumOfEvenAndOddPlace) {
+
+        if(sumOfEvenAndOddPlace % 10 == 0) {
+            return true;
+        }
+
+        return false;
+    }
 }

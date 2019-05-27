@@ -62,12 +62,32 @@ class CreditCardNumberValidationTest {
     @Test
     public void getSumOfEvenAndOddPlaceTest_ShoulReturnSumOfTheSumOfOddPlaceAndSumOfEvenPlace(){
 
-        int result = card1.getSumOfEvenAndOddPlace(card1.sumOfOddPlace(creditCardNumber)
-                + card1.sumOfDoubleEvenPlace(creditCardNumber));
+        int result = card1.getSumOfEvenAndOddPlace(card1.sumOfOddPlace(creditCardNumber),
+                card1.sumOfDoubleEvenPlace(creditCardNumber));
 
         int expected = 62;
 
         Assertions.assertEquals(expected,result);
     }
+
+    @Test
+    public void sumIsDivisibleBy10Test_ShouldReturnFalse_IfGivenSumOfEvenAndOddPlace(){
+
+        boolean expected = card1.sumIsDivisibleBy10(card1.getSumOfEvenAndOddPlace(card1.sumOfOddPlace(creditCardNumber),
+                card1.sumOfDoubleEvenPlace(creditCardNumber)));
+
+        Assertions.assertFalse(expected);
+    }
+
+
+    @Test
+    public void sumIsDivisibleBy10Test_ShouldReturnTrue_IfGivenSumOfEvenAndOddPlace() {
+
+        boolean expected = card1.sumIsDivisibleBy10(60);
+
+        Assertions.assertTrue(expected);
+
+    }
+
 
 }
