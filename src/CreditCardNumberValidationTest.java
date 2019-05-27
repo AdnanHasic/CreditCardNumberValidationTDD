@@ -43,4 +43,12 @@ class CreditCardNumberValidationTest {
         Assertions.assertEquals(expected, result);
     }
 
+    @Test
+    public void prefixMatchedTest_ShouldReturnTrue_IfGivenNumberPrefixForCreditCardNumber(){
+
+        boolean expected = card1.prefixMatchedTest(creditCardNumber, 5);
+
+        Assertions.assertTrue(expected);
+    }
+
 }

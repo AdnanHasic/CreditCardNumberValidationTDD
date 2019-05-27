@@ -40,4 +40,18 @@ public class CreditCardNumberValidation {
         }
         return sumOfOddPlace;
     }
+
+    public boolean prefixMatchedTest(long creditCardNumber, int prefix) {
+
+        String creditCardnNumberToString = Long.toString(creditCardNumber);
+
+        String prefixToString = Integer.toString(prefix);
+
+        if(creditCardnNumberToString.startsWith(prefixToString)) {
+
+            return true;
+
+        }
+        return false;
+    }
 }
