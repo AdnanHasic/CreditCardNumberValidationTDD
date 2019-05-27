@@ -54,4 +54,11 @@ public class CreditCardNumberValidation {
         }
         return false;
     }
+
+    public int getSize(long creditCardNumber) {
+
+        String creditCardnNumberToString = Long.toString(creditCardNumber);
+
+        return creditCardnNumberToString.length();
+    }
 }
