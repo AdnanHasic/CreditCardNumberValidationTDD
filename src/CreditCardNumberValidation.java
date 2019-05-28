@@ -1,5 +1,7 @@
 public class CreditCardNumberValidation {
 
+    public CreditCardNumberValidation() {
+    }
 
     public int sumOfDoubleEvenPlace(long creditCardNumber) {
 
@@ -43,11 +45,9 @@ public class CreditCardNumberValidation {
 
     public boolean prefixMatchedTest(long creditCardNumber, int prefix) {
 
-        String creditCardnNumberToString = Long.toString(creditCardNumber);
+        String creditCardNumberToString = Long.toString(creditCardNumber);
 
-        String prefixToString = Integer.toString(prefix);
-
-        if(creditCardnNumberToString.startsWith(prefixToString)) {
+        if (creditCardNumberToString.startsWith(Integer.toString(prefix))) {
 
             return true;
 
@@ -69,10 +69,19 @@ public class CreditCardNumberValidation {
 
     public boolean sumIsDivisibleBy10(int sumOfEvenAndOddPlace) {
 
-        if(sumOfEvenAndOddPlace % 10 == 0) {
+        if (sumOfEvenAndOddPlace % 10 == 0) {
             return true;
         }
 
         return false;
+    }
+
+    public boolean isValid(boolean prefixMatchedTest, boolean sumIsDivisibleBy10, int getSize) {
+
+        if (prefixMatchedTest && sumIsDivisibleBy10 && (getSize < 17) && (getSize > 12)) {
+            return true;
+        }
+            return false;
+
     }
 }
